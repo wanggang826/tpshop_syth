@@ -1,0 +1,100 @@
+<include file="public/header" title="下级详情" body=""/>
+<include file="public/header_nav" title="下级详情" href="javascript:history.back(-1)"/>
+<style>
+    html,body{height:100%;}
+    .fll_acc li{
+        text-align: center;
+    }
+</style>
+<div class="allaccounted"  id="pullrefresh" style="overflow-y: scroll;height: 100%;padding-bottom: 80px;">
+    <div class="maleri30">
+        <div class="allpion">
+	         <div class="fll_acc">
+	         	<ul><li style="width: 20%">编号</li><li style="width: 20%">会员/VIP</li><li style="width: 25%">职务</li><li style="width: 35%">手机</li></ul>
+	         </div>
+            <empty name="JuniorList">
+                <p style="margin-left: 33%; margin-top: 20%;">--亲,暂无记录--</p>
+            </empty>
+             <foreach name="JuniorList" item="v">
+                 <div class="fll_acc">
+                     <ul>
+                         <li style="width: 20%">{$v.user_id}</li>
+                         <li style="width: 20%"><if condition="$v['level'] eq 5">VIP <else/>普通会员</if></li>
+                         <li style="width: 25%"><if condition="$v['position'] eq 1">区域经理 <elseif condition="$v['position'] eq 2"/>业务经理<elseif condition="$v['position'] eq 3"/>客户经理<elseif condition="$v['position'] eq 0"/>无</if></li>
+                         <li style="width: 35%"><if condition="$v['mobile'] eq ''">--<else/>{$v.mobile}</if></li>
+                     </ul>
+                 </div>
+             </foreach>
+         </div>
+        <div id="getmore"  style="font-size:.32rem;text-align: center;color:#888;padding:.25rem .24rem .4rem; clear:both;display: none">
+            <a >已显示完所有下级</a>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script>
+<script src="__STATIC__/js/style.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    mui.init();
+    mui.init({
+        pullRefresh : {
+            container:"#pullrefresh",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up : {
+                height:50,//可选.默认50.触发上拉加载拖动距离
+                auto:false,//可选,默认false.自动上拉加载一次
+                contentrefresh : "努力加载中...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback :function () {
+                    var self=this;
+                    var offset=$(".fll_acc").length;
+                    mui.ajax('memberInfo',{
+                        data:{'offset':offset},
+                        dataType:'json',//服务器返回json格式数据
+                        type:'post',//HTTP请求类型
+                        timeout:10000,//超时时间设置为10秒；
+                        headers:{'Content-Type':'application/json'},
+                        success:function(data){
+                            if(data==''){
+                                self.endPullupToRefresh(true);
+                            }else {
+                                var len = data.length;
+                                var html = '';
+                                for (var i=0;i<len;i++){
+                                    html += "<div class='fll_acc'>"
+                                    html += "<ul>";
+                                   html += "<li style='width: 20%'>"+data[i]['user_id']+"</li>";
+                                   if(data[i]['level'] == 5){
+                                       html += "<li style='width: 20%'>VIP</li>";
+                                   }else{
+                                       html += "<li style='width: 20%'>普通会员</li>";
+                                   }
+                                   if(data[i]['position'] == 1){
+                                       html += "<li style='width: 25%'>区域经理</li>";
+                                   }else if(data[i]['position'] == 2){
+                                       html += "<li style='width: 25%'>业务经理</li>";
+                                   }else if(data[i]['position'] == 3){
+                                       html += "<li style='width: 25%'>客户经理</li>";
+                                   }else{
+                                       html += "<li style='width: 25%'>无</li>";
+                                   }
+                                    if(data[i]['mobile'] == ''){
+                                        html += "<li style='width: 35%'>--</li>";
+                                    }else{
+                                        html += "<li style='width: 35%'>"+data[i]['mobile']+"</li>";
+                                    }
+                                    html += "</ul></div>";
+                                }
+                                $(".fll_acc:last").after(html);
+                                self.endPullupToRefresh(false);
+                            }
+                        },
+                        error:function(xhr,type,errorThrown){
+
+                        }
+                    });
+                } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            }
+        }
+    });
+</script>
+</body>
+</html>

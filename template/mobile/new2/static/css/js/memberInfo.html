@@ -1,0 +1,44 @@
+<include file="public/header" title="下级详情" body=""/>
+<include file="public/header_nav" title="下级详情" href="javascript:history.back(-1)"/>
+<style>
+    .fll_acc li{
+        text-align: center;
+    }
+</style>
+<div class="allaccounted">
+    <div class="maleri30">
+        <div class="allpion">
+            <span class="allpion1">zhihohlk</span>
+	         <div class="fll_acc">
+	         	<ul><li style="width: 20%">编号</li><li style="width: 20%">会员/VIP</li><li style="width: 25%">职务</li><li style="width: 35%">手机</li></ul>
+	         </div>
+            <empty name="JuniorList">
+                <p style="margin-left: 33%; margin-top: 20%;">--亲,暂无记录--</p>
+            </empty>
+             <foreach name="JuniorList" item="v">
+                 <div class="fll_acc">
+                     <ul>
+                         <li style="width: 20%">{$v.user_id}</li>
+                         <li style="width: 20%"><if condition="$v['level'] eq 5">VIP <else/>普通会员</if></li>
+                         <li style="width: 25%"><if condition="$v['position'] eq 1">区域经理 <elseif condition="$v['position'] eq 2"/>业务经理<elseif condition="$v['position'] eq 3"/>客户经理<elseif condition="$v['position'] eq 0"/>无</if></li>
+                         <li style="width: 35%"><if condition="$v['mobile'] eq ''">--<else/>{$v.mobile}</if></li>
+                     </ul>
+                 </div>
+             </foreach>
+         </div>
+        <div id="getmore"  style="font-size:.32rem;text-align: center;color:#888;padding:.25rem .24rem .4rem; clear:both;display: none">
+            <a >已显示完所有下级</a>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/sourch_submit.js"></script>
+<script src="__STATIC__/js/style.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    mui.init();
+mui('.allpion').on('tap','.allpion1',function(){
+    alert(44)
+})
+</script>
+</body>
+</html>

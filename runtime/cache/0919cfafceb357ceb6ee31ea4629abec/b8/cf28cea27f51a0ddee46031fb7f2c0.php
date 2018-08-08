@@ -1,0 +1,3 @@
+<?php
+//000000000001{"switch":"1","condition":"0","name":"\u6211\u7684\u5206\u9500\u5546","pattern":"0","own_rate":"0","first_name":"\u5ba2\u6237\u7ecf\u7406\u8fd4\u4f63\u6bd4\u4f8b","first_rate":"70","second_name":"\u4e1a\u52a1\u7ecf\u7406\u8fd4\u4f63\u6bd4\u4f8b","second_rate":"20","third_name":"\u533a\u57df\u7ecf\u7406\u8fd4\u4f63\u6bd4\u4f8b","third_rate":"10","date":"2","form_submit":"ok","qr_back":"","qr_big_back":"","qrcode_menu_word":"","qrcode_input_word":""}
+?>

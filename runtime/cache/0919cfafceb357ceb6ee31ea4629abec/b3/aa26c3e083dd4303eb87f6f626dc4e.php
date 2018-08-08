@@ -1,0 +1,3 @@
+<?php
+//000000000001{"site_url":"http:\/\/sy.baogt.com","record_no":"\u7ca412345678\u53f7","store_name":"\u987a\u4ebf\u7f51","store_logo":"\/public\/images\/newLogo.png","store_title":"\u987a\u4ebf\u7f51","store_desc":"\u987a\u4ebf\u7f51","store_keyword":"\u987a\u4ebf\u7f51","contact":"","phone":"400-9667-533","address":"\u9526\u534e\u5927\u53a6518;","qq":"123456789","qq2":"123456789","qq3":"123456789","mobile":"","province":"28240","city":"28558","district":"0","form_submit":"ok"}
+?>

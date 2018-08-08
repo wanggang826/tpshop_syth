@@ -1,0 +1,90 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+	<div class="fixed-bar">
+		<div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+			<div class="subject">
+				<h3>会员返点管理 - 编辑会员返点</h3>
+				<h5>网站系统会员返点</h5>
+			</div>
+		</div>
+	</div>
+	<form class="form-horizontal" id="handleposition" method="post">
+		<input type="hidden" name="id" value="{$rebates.id}">
+		<div class="ncap-form-default">
+			<dl class="row">
+				<dt class="tit">
+					<label for="proportion"><em>*</em>消费返点率</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="proportion" value="{$rebates.proportion}" id="proportion" class="input-txt" onchange="percent_bili(this.value)">
+					<span class="err" id="err_proportion"></span>
+					<p class="notic">返点率单位为百分比，如输入10，表示会员购买成功之后会获得10%返点</p>
+				</dd>
+			</dl>
+
+			<dl class="row">
+				<dt class="tit">
+					<label for="status"><em>*</em>返点状态</label>
+				</dt>
+				<dd class="opt">
+					<input type="radio" name="status" value="1"   <if condition="$rebates['status'] eq 1">checked</if>> 启用
+					<input type="radio" name="status" value="0"   <if condition="$rebates['status'] eq 0">checked</if>> 禁用
+					<span class="err" id="err_status"></span>
+					<p class="notic">选择"启用",该返点比例就生效;选择"禁用",该返点比例失效.</p>
+				</dd>
+			</dl>
+			<div class="bot"><a href="JavaScript:void(0);" onclick="verifyForm()" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+    /**
+     *检测返点比例的正确性
+     */
+    function  percent_bili(val){
+        if(val <= 100){
+            var reg=/(^[1-9]{1}[0-9]*$)|(^[0-9]*\.[0-9]{2}$)/;
+            if(!reg.test(val)){
+                $("#proportion").val('');
+                layer.msg('请输入有效的比例值,比如:8 ; 8.8 ; 8.88',{icon:5});
+            }
+        }else{
+            $("#proportion").val('');
+            layer.msg('请输入有效的比例值已经超出商品价格',{icon:5});
+        }
+    }
+
+
+
+
+
+    function verifyForm(){
+        $('span.err').show();
+        $.ajax({
+            type: "POST",
+            url: "{:U('Admin/User/rebates')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    layer.msg(data.msg, {icon: 1,time:3000});
+
+                } else {
+                    layer.msg(data.msg, {icon: 2});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

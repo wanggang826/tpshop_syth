@@ -1,0 +1,42 @@
+<div class="tpshop-service">
+	<ul class="w1224 clearfix">
+		<!--<li>-->
+			<!--<i class="ico ico-day7"></i>-->
+			<!--<p class="service">7天无理由退货</p>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<i class="ico ico-day15"></i>-->
+			<!--<p class="service">15天免费换货</p>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<i class="ico ico-quality"></i>-->
+			<!--<p class="service">正品行货 品质保障</p>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<i class="ico ico-service"></i>-->
+			<!--<p class="service">专业售后服务</p>-->
+		<!--</li>-->
+	</ul>
+</div>
+<div class="footer">
+	<div class="w1224 clearfix">
+		<div class="left-help-list clearfix">
+		<tpshop sql="select * from `__PREFIX__article_cat` where parent_id = 2 limit 5" key="k" item='v'>
+			<dl>
+				<dt>{$v[cat_name]}</dt>
+				<tpshop sql="select * from `__PREFIX__article` where cat_id = $v[cat_id]  and is_open=1 limit 5" key="k2" item='v2'>
+				<dd><a href="{:U('Home/Article/detail',array('article_id'=>$v2[article_id]))}">{$v2[title]}</a></dd>
+				</tpshop>
+			</dl>
+		</tpshop>
+		</div>
+		<div class="right-contact-us">
+			<h3 class="title">联系我们</h3>
+			<span class="phone">{$tpshop_config['shop_info_phone']}</span>
+			<div class="qr-code-list clearfix">
+				<a class="qr-code" href="javascript:;"><img class="w-100" src="__STATIC__/images/qrcode.png" alt="" /></a>
+				<a class="qr-code qr-code-tpshop" href="javascript:;"><img class="w-100" src="__STATIC__/images/qrcode.png" alt="" /></a>
+			</div>
+		</div>
+	</div>
+</div>
