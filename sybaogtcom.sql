@@ -1,12 +1,4 @@
-﻿# Host: sy.baogt.com  (Version: 5.7.18)
-# Date: 2018-01-23 14:23:59
-# Generator: MySQL-Front 5.3  (Build 4.234)
 
-/*!40101 SET NAMES utf8 */;
-
-#
-# Structure for table "sh_account_log"
-#
 
 DROP TABLE IF EXISTS `sh_account_log`;
 CREATE TABLE `sh_account_log` (

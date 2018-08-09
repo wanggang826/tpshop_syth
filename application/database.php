@@ -13,13 +13,13 @@ return [
     // 数据库类型
     'type'           => 'mysql',
     // 服务器地址
-    'hostname'       => '192.168.124.222',
+    'hostname'       => 'wanggangg.top',
     // 数据库名
     'database'       => 'syth',
     // 用户名
-    'username'       => 'syth',
+    'username'       => 'root',
     // 密码
-    'password'       => 'syth',
+    'password'       => 'wgg@aly@mysql@2018',
     // 端口
     'hostport'       => '3306',
     // 连接dsn
