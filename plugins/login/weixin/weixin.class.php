@@ -20,7 +20,7 @@ class weixin extends Model
 //		else
 //	    $this->return_url = "http://".$_SERVER['HTTP_HOST']."/index.php?m=Home&c=LoginApi&a=callback&oauth=qq";
         //$this->return_url = "http://".$_SERVER['HTTP_HOST']."/index.php/Home/LoginApi/callback/oauth/weixin";
-        $this->return_url = "http://www.sygwsc.cn/index.php/Home/LoginApi/callback/oauth/weixin";
+        $this->return_url = "http://zkx.wanggangg.top/index.php/Home/LoginApi/callback/oauth/weixin";
         $this->app_id = $config['appid'];
         $this->app_secret = $config['secret'];
         $this->state = "sysy";
@@ -34,7 +34,7 @@ class weixin extends Model
     {
         if(is_weixin()){
             //手机微信的话直接拉取网页授权页面
-            $return_url = "http://www.sygwsc.cn/index.php/Mobile/LoginApi/callback/oauth/weixin";
+            $return_url = "http://zkx.wanggangg.top/index.php/Mobile/LoginApi/callback/oauth/weixin";
             $dialog_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $this->app_id . "&redirect_uri=" . urlencode($return_url) . "&response_type=code&scope=snsapi_login&state=" . $this->state . "#wechat_redirect";
             echo("<script> top.location.href='" . $dialog_url . "'</script>");
             exit;
