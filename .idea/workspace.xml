@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0866f0e3-5c2a-4ec5-a9bc-b679ef541cf6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/d4/9cb47e4dc4f8e70a4a695de97c6967.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/database.php" afterPath="$PROJECT_DIR$/application/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/1d/bf3d40a0a5e8233db184f4d3f588d1.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/1d/bf3d40a0a5e8233db184f4d3f588d1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/29/87299ed82abe41e34ad72ad2252d69.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/29/87299ed82abe41e34ad72ad2252d69.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/57/4174486c44411defd4b3bf0d76892f.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/57/4174486c44411defd4b3bf0d76892f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/62/060db10f87e395d94f0efd8e528508.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/62/060db10f87e395d94f0efd8e528508.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/72/da722ae04c50b04b3fb6530f92a61f.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/72/da722ae04c50b04b3fb6530f92a61f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/b3/aa26c3e083dd4303eb87f6f626dc4e.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/b3/aa26c3e083dd4303eb87f6f626dc4e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/b8/333e7035bb483364668bbba486cefe.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/b8/333e7035bb483364668bbba486cefe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/bb/4c2db7969c1eb046dd696cac468666.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/bb/4c2db7969c1eb046dd696cac468666.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/d2/82bacdff7f91fa08edd7d5c06a6aa8.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/d2/82bacdff7f91fa08edd7d5c06a6aa8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/f1/7aaabc20bfe045075927934fed52d2.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/f1/7aaabc20bfe045075927934fed52d2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/f2/481f823f955f04ea0c1c6d8c2e0189.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/f2/481f823f955f04ea0c1c6d8c2e0189.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/fc/ba1e70dbb6b0d504c01ecfbe9838da.php" afterPath="$PROJECT_DIR$/runtime/cache/0919cfafceb357ceb6ee31ea4629abec/fc/ba1e70dbb6b0d504c01ecfbe9838da.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sybaogtcom.sql" afterPath="$PROJECT_DIR$/sybaogtcom.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/.gitignore" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tpshop_syth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,6 +144,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tpshop_syth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tpshop_syth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -155,6 +165,32 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -166,12 +202,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533777837376</updated>
-      <workItem from="1533777839803" duration="2236000" />
+      <workItem from="1533777839803" duration="3515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2236000" />
+    <option name="totallyTimeSpent" value="3515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="3775" height="2136" extended-state="6" />
@@ -248,6 +284,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
